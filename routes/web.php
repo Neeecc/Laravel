@@ -12,6 +12,9 @@ Route::get('/tentang', function () {
     return view('tentang');
 });
 
+Route::get('/error', function () {
+    return view('error');
+});
 
 route::resource('fakultas', FakultasController::class);
 route::resource('periode', PeriodeController::class);
