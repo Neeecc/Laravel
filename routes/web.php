@@ -13,10 +13,10 @@ Route::get('/tentang', function () {
     return view('tentang');
 });
 
-Route::get('/error', function () {
-    return view('error');
+Route::get('/main', function () {
+    return view('main');
 });
 
 route::resource('fakultas', FakultasController::class);
 route::resource('periode', PeriodeController::class);
-Route::get('/prodi',[ProdiController::class, 'index']);
+Route::resource('/prodi',ProdiController::class);
