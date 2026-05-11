@@ -4,12 +4,24 @@
 
 @section("title1","List Fakultas")
 
-@section("footer","©M.Wanhar - 2529250056")
-
 @section('content')
-    <ul>
-        @foreach ($result as $item)
-        <li>{{  $item->nama_fakultas  }} - {{ $item->singkatan }} <br></li>
+<table class= "table table-bordered">
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Singkatan</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach ($result as $key => $fakultas)
+        <tr>
+            <td>{{$fakultas->nama_fakultas}}</td>
+            <td>{{$fakultas->singkatan}}</td>
+        </tr>
         @endforeach
-    </ul>
+    </tbody>
+</table>
+<a href="{{ route("fakultas.create") }}" class= "btn btn-primary mt-2">Tambah</a>
 @endsection
+
+@section("footer","©M.Wanhar - 2529250056")

@@ -233,7 +233,7 @@
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
-                <span class="d-none d-md-inline">M. Wanhar</span>
+                <span class="d-none d-md-inline">Neeecc</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
@@ -244,7 +244,7 @@
                     alt="User Image"
                   />
                   <p>
-                    M. Wanhar - Pria Solo
+                    Neeecc - Pria Solo
                     <small>Member since Nov. 2023</small>
                   </p>
                 </li>
@@ -341,6 +341,12 @@
                     </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route("periode.index") }}" class="nav-link">
+                  <i class="nav-icon bi bi-building"></i>
+                  <p>Periode</p>
+                </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route("fakultas.index") }}" class="nav-link">
