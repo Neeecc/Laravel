@@ -28,4 +28,5 @@
     </tr>      
     @endforeach
 </table>
+<a href="{{ route('prodi.create') }}" class="btn btn-primary mt-2">Tambah</a>
 @endsection

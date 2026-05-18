@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE 4 | Unfixed Sidebar</title>
+    <title>AdminLTE 4 | Laravel</title>
 
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -499,6 +499,31 @@
     </script>
     <!--end::OverlayScrollbars Configure-->
     <!--end::Script-->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+      <script type="text/javascript">
+          $('.show_confirm').click(function(event) {
+              var form = $(this).closest("form");
+              var nama = $(this).data("nama");
+              event.preventDefault();
+              swal({
+                      title: `Apakah Anda yakin ingin menghapus data ${nama} ini?`,
+                      text: "If you delete this, it will be gone forever.",
+                      icon: "warning",
+                      buttons: true,
+                      dangerMode: true,
+                  })
+                  .then((willDelete) => {
+                      if (willDelete) {
+                          form.submit();
+                      }
+                  });
+          });
+  </script>
+
+
   </body>
   <!--end::Body-->
 </html>

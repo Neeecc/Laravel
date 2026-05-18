@@ -69,8 +69,12 @@ class FakultasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(fakultas $fakultas)
+    public function destroy($fakultas)
     {
-        //
+        //cari data berdasarkan id
+        $fakultas = fakultas::find($fakultas, "id");
+        // dd($fakultas);
+        $fakultas -> delete(); 
+        return redirect()-> route("fakultas.index");
     }
 }

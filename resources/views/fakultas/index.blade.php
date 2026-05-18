@@ -10,6 +10,7 @@
         <tr>
             <th>Nama</th>
             <th>Singkatan</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,15 @@
         <tr>
             <td>{{$fakultas->nama_fakultas}}</td>
             <td>{{$fakultas->singkatan}}</td>
+            <td>
+                <form method="POST" action="{{ route('fakultas.destroy', $fakultas->id) }}">
+                    @csrf
+                <input name="_method" type="hidden" value="DELETE">
+                <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+                    data-toggle="tooltip" title='Delete'
+                    data-nama='{{ $fakultas->nama_fakultas }}'>Hapus</button>
+                </form>
+            </td>
         </tr>
         @endforeach
     </tbody>
