@@ -28,7 +28,7 @@
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
-    <link rel="preload" href="../css/adminlte.css" as="style" />
+    <link rel="preload" href="{{ url('css/adminlte.css') }}" as="style" />
     <!--end::Accessibility Features-->
 
     <!--begin::Fonts-->
@@ -59,7 +59,7 @@
     <!--end::Third Party Plugin(Bootstrap Icons)-->
 
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="../css/adminlte.css" />
+    <link rel="stylesheet" href="{{ url('css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
   </head>
   <!--end::Head-->
@@ -109,7 +109,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../assets/img/user1-128x128.jpg"
+                        src="{{ url('assets/img/user1-128x128.jpg') }}"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -135,7 +135,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../assets/img/user8-128x128.jpg"
+                        src="{{ url('assets/img/user8-128x128.jpg') }}"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -161,7 +161,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../assets/img/user3-128x128.jpg"
+                        src="{{ url('assets/img/user3-128x128.jpg') }}"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -229,7 +229,7 @@
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="../assets/img/user2-160x160.jpg"
+                  src="{{ url('assets/img/user2-160x160.jpg') }}"
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
@@ -239,7 +239,7 @@
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src="../assets/img/user2-160x160.jpg"
+                    src="{{ url('assets/img/user2-160x160.jpg') }}"
                     class="rounded-circle shadow"
                     alt="User Image"
                   />
@@ -289,7 +289,7 @@
           <a href="../index.html" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../assets/img/AdminLTELogo.png"
+              src="{{ url('assets/img/AdminLTELogo.png') }}"
               alt="AdminLTE Logo"
               class="brand-image opacity-75 shadow"
             />
@@ -467,7 +467,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="../js/adminlte.js"></script>
+    <script src="{{ url('js/adminlte.js') }}"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';

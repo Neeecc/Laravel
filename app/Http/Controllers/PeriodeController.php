@@ -52,17 +52,25 @@ class PeriodeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(periode $periode)
+    public function edit($periode)
     {
-        //
+        $periode = periode::find($periode);
+        // dd($periode);
+        return view ("periode.edit",compact("periode"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, periode $periode)
+    public function update(Request $request, $periode)
     {
-        //
+        $input = $request ->validate([
+            'tahun_akademik' => 'required:periode,tahun_akademik,' . $periode, 'semester' => 'required'
+        ]);
+        //simpan ke tabel periode
+        Periode::where('id',$periode)->update($input);
+        //redirect ke route periode.index
+        return redirect()->route("periode.index");
     }
 
     /**
