@@ -34,7 +34,8 @@ class FakultasController extends Controller
     {
         //validasi input data
         $input = $request ->validate([
-            'nama_fakultas' => 'required|unique:fakultas', 'singkatan' => 'required'
+            'nama_fakultas' => 'required|unique:fakultas', 
+            'singkatan' => 'required'
         ]);
         //simpan ke tabel fakultas
         fakultas::create($input);
@@ -66,7 +67,8 @@ class FakultasController extends Controller
     {
         //validasi input data
         $input = $request ->validate([
-            'nama_fakultas' => 'required|unique:fakultas,nama_fakultas,'. $fakultas, 'singkatan' => 'required'
+            'nama_fakultas' => 'required|unique:fakultas,nama_fakultas,'. $fakultas, 
+            'singkatan' => 'required'
         ]);
         //simpan ke tabel fakultas
         fakultas::where('id',$fakultas)->update($input);

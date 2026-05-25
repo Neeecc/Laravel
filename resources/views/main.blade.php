@@ -360,6 +360,12 @@
                   <p>Prodi</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route("mahasiswa.index") }}" class="nav-link">
+                  <i class="nav-icon bi bi-person"></i>
+                  <p>Mahasiswa</p>
+                </a>
+              </li>
             </ul>
             <!--end::Sidebar Menu-->
           </nav>

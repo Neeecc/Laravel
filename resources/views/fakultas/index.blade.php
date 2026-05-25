@@ -22,10 +22,10 @@
                 <form method="POST" action="{{ route('fakultas.destroy', $fakultas->id) }}">
                     @csrf
                 <input name="_method" type="hidden" value="DELETE">
-                <a href="{{ route("fakultas.edit",$fakultas->id) }}" class="btn btn-warning btn-rounded">Edit</a>
-                <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+                <a href="{{ route("fakultas.edit",$fakultas->id) }}" class="btn btn-warning btn-rounded bi bi-pencil-square"> Edit</a>
+                <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm bi bi-trash3"
                     data-toggle="tooltip" title='Delete'
-                    data-nama='{{ $fakultas->nama_fakultas }}'>Hapus</button>
+                    data-nama='{{ $fakultas->nama_fakultas }}'> Hapus</button>
                 </form>
             </td>
         </tr>
