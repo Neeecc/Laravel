@@ -74,8 +74,8 @@ class MahasiswaController extends Controller
     public function update(Request $request, $mahasiswa)
     {
         $input = $request -> validate([
-            'nama' => "required,". $mahasiswa, 
-            "npm" => "required|unique:mahasiswa,npm",
+            'nama' => "required", 
+            "npm" => "required|unique:mahasiswas,npm,". $mahasiswa,
             "foto" =>  "nullable|image|mimes:jpeg,png,jpg,gif|max:2048",
             "prodi_id" => "required|exists:prodis,id"
         ]);
